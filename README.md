@@ -1,43 +1,66 @@
-# Data-Driven Hospitality Management System
+# 🏨 Data-Driven Hospitality Management System
 
-## Overview
-The Data-Driven Hospitality Management System is a comprehensive solution designed to streamline operations for hospitality businesses such as hotels, restaurants, and resorts. This system leverages data-driven insights to optimize resource management, enhance guest experiences, and improve operational efficiency.
+## 🎯 Project Overview
+This project is a comprehensive **Business Intelligence (BI) solution** developed to solve revenue management challenges in the hospitality sector. By transforming raw booking data into actionable insights, this dashboard enables hotel managers to monitor **Revenue Per Available Room (RevPAR)**, **Average Daily Rate (ADR)**, and **Occupancy %** in real-time.
 
-## Features
-- **Guest Management**: Efficiently manage guest information, bookings, and preferences.
-- **Reservation System**: Handle room or table reservations with real-time availability updates.
-- **Analytics Dashboard**: Visualize key performance indicators (KPIs) such as occupancy rates, revenue, and guest satisfaction.
-- **Inventory Management**: Track and manage inventory for supplies, food, and beverages.
-- **Staff Scheduling**: Automate staff rostering and task assignments.
-- **Reporting**: Generate detailed reports for operational and strategic decision-making.
 
-## Technologies Used
-- **Power BI**: For creating interactive dashboards and visualizations.
-- **DAX (Data Analysis Expressions)**: For advanced calculations and data modeling within Power BI.
-- **Power Query**: For data transformation and integration from various sources.
+<p align="center">
+  <img src="images/dashboard.png" width="900" alt="Main Dashboard">
+  <br>
+  <b><i>Figure 1: Executive Revenue & Booking Analysis Dashboard</i></b>
+</p>
 
-## Installation
-1. **Install Power BI Desktop**:
-   - Download and install Power BI Desktop from the [official Microsoft website](https://powerbi.microsoft.com/desktop/).
-   - Ensure you have a compatible version (check the [system requirements](https://docs.microsoft.com/en-us/power-bi/fundamentals/desktop-latest-update)).
-2. **Clone the repository** (if applicable):
-   ```bash
-   git clone https://github.com/SarahJobyDavid/Data-Driven-Hospitality-Management-System.git
-   ```
-   - This step is only needed if the repository contains `.pbix` files, data sources (e.g., CSV, Excel), or supporting scripts.
-3. **Open the Power BI File**:
-   - Navigate to the cloned repository folder and open the `.pbix` file(s) in Power BI Desktop.
-   - If no `.pbix` file is included, use the provided data files (e.g., CSV, Excel) and import them into Power BI Desktop using Power Query.
-4. **Configure Data Sources**:
-   - In Power BI Desktop, go to `Home > Transform Data` to open Power Query Editor.
-   - Update data source paths (e.g., for CSV/Excel files) or connect to external databases/APIs using credentials as needed.
-5. **Refresh Data**:
-   - Click `Refresh` in Power BI Desktop to load the latest data and update the dashboards.
+---
 
-## Contributing
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Make your changes and commit (`git commit -m 'Add your feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
+## 🚀 Key Features & Interactive Elements
+
+### 🔍 Advanced Data Visualization
+I utilized **Custom Tooltips** to provide deeper context without cluttering the main UI. Users can hover over any metric to see daily trends and performance by category.
+
+| RevPAR Analysis by Day Type | Revenue Trends by Category |
+| :---: | :---: |
+| <img src="images/tooltips.png" width="450" alt="RevPAR Tooltip"> | <img src="images/tooltip2.png" width="450" alt="Revenue Tooltip"> |
+| *Figure 2: RevPAR by week no and day_type* | *Figure 3: Revenue by week no and category* |
+---
+
+## 🛠️ Technical Stack & Implementation
+* **Power BI:** Developed the full interactive reporting environment.
+* **Data Modeling:** Built a robust Star Schema involving fact tables and dimension tables (Date, Hotel, Room).
+* * **Power Query (M):** Cleaned and transformed datasets including `fact_bookings` and `dim_date`.
+* **DAX Calculations:** Engineered custom measures for:
+    * **RevPAR** (Revenue Per Available Room)
+    * **ADR** (Average Daily Rate)
+    * **Occupancy %** and **Realization %**
+    * **WoW Change:** Comparative metrics to track performance against the previous week.
+* **UI/UX:** Designed with a focus on "Data-to-Ink" ratio, using color-coded filters and WoW (Week-on-Week) indicators.
+
+---
+
+## 📂 Repository Structure
+* `/data`: Contains the raw CSV/Excel datasets.
+* `/images`: Screenshots and GIFs of the dashboard.
+* `Hospitality_Management.pbix`: The main Power BI project file.
+
+
+
+
+
+---
+
+## 🚀 Features
+
+* **Dynamic Filtering:** Filter data by City, Room Type, Month, and Week Number.
+* **WoW Performance Tracking:** Visual indicators (Red/Green arrows) showing growth or decline in KPIs.
+* **Property Ranking:** A detailed table ranking hotels by revenue and rating for competitive analysis.
+* **Mobile-Friendly Layout:** Optimized visual placement for accessibility across devices.
+
+---
+
+## 📂 How to Use
+
+1. **Download:** Clone this repository or download the `.pbix` file.
+2. **Open:** Launch the file in [Power BI Desktop](https://powerbi.microsoft.com/desktop/).
+3. **Interact:** Use the slicers at the top to filter data; hover over the charts to see the **Hidden Tooltip** insights.
+
+---
+
